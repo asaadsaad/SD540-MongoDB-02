@@ -7,7 +7,7 @@ const CommentSchema = new Schema({
         email: { type: String, required: true },
         name: { type: String, required: true }
     },
-}, { timestamps: true });
+});
 
 const PostSchema = new Schema({
     title: { type: String, required: true },
