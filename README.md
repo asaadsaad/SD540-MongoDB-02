@@ -7,7 +7,7 @@ const CommentSchema = new Schema({
         email: { type: String, required: true },
         name: { type: String, required: true }
     },
-});
+}, { timestamps: true });
 
 const PostSchema = new Schema({
     title: { type: String, required: true },
@@ -16,10 +16,12 @@ const PostSchema = new Schema({
     comments: [CommentSchema],
 }, { timestamps: true });
 
-type Post = InferSchemaType<typeof PostSchema>;
-type Comment = InferSchemaType<typeof CommentSchema>;
+type PostWithTimestamps = InferSchemaType<typeof PostSchema>;
+type CommentWithTimestamps = InferSchemaType<typeof CommentSchema>;
+export type Post = Partial<PostWithTimestamps>;
+export type Comment = Partial<CommentWithTimestamps>;
 
-const PostModel = model<Post>('post', PostSchema);
+export const PostModel = model<Post>('post', PostSchema);
 ```
 * Write a function to add a new post.
 * Write a function to add a new comment. Add multiple comments by multiple users.
