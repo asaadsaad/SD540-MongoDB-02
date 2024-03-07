@@ -17,6 +17,7 @@ const PostSchema = new Schema({
 }, { timestamps: true });
 
 type Post = InferSchemaType<typeof PostSchema>;
+type Comment = InferSchemaType<typeof CommentSchema>;
 
 const PostModel = model<Post>('post', PostSchema);
 ```
