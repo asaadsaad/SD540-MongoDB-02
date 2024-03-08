@@ -29,4 +29,4 @@ export const PostModel = model<Post>('post', PostSchema);
 * Write a function to add multiple comments.
 * Write a function to update a comment text, identified by post id, and comment id.
 * Write a function to update the user name, in all posts and comments created by a user.
-* Write a function to delete all comments created by a user.
+* Write a function to delete a comments by comment id, for a specific post.
