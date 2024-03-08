@@ -24,9 +24,9 @@ export type Comment = Partial<CommentWithTimestamps>;
 export const PostModel = model<Post>('post', PostSchema);
 ```
 * Write a function to add a new post.
-* Write a function to add a new comment. Add multiple comments by multiple users.
+* Write a function to add a new comment. Call the function and add comments by multiple users.
 * Write a function to return all comments created by a user, with pagination.
 * Write a function to add multiple comments.
-* Write a function to update a comment text by user's email.
-* Write a function to update the user name, in all comments created by a user.
+* Write a function to update a comment text, identified by post id, and comment id.
+* Write a function to update the user name, in all posts and comments created by a user.
 * Write a function to delete all comments created by a user.
